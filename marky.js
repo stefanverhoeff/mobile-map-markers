@@ -2,7 +2,11 @@
     console.log('woa!');
 
     $('#rnd').click(function () {
-        alert('something amazing is about to happen!');
+        $( "#popupAmazing" ).popup("open");
+
+        setTimeout(function () {
+            $( "#popupAmazing" ).popup( "close" )
+        }, 2000);
     });
 
     nokia.mh5.assetsPath = "http://api.maps.nokia.com/mobile/0.2.0/lib/";
