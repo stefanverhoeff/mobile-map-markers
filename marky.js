@@ -5,6 +5,12 @@
     nokia.mh5.app.embed({
         domNode: "#app_location",
         appId: "_peU-uCkp-j8ovkzFGNU",
-        appCode: "gBoUkAMoxoqIWfxWA5DuMQ"
+        appCode: "gBoUkAMoxoqIWfxWA5DuMQ",
+        configuration: {
+            map: {
+            },
+            search: null,
+            details: null
+        }
     });
 })();

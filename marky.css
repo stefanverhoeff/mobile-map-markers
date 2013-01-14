@@ -1,0 +1,16 @@
+#app_location {
+    width:100%;
+    height:100%;
+}
+
+#controls {
+    position:absolute;
+    bottom:15px;
+    left:65px;
+    z-index:667;
+}
+
+#controls #rnd {
+    width:100px;
+    height:100px;
+}
