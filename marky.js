@@ -27,18 +27,16 @@
     document.getElementById("app_location").appendChild(map.root);
 
     $('#rnd').click(function () {
-        $( "#popupAmazing" ).popup("open");
+        // Calculate random point around center of the map
+        var lat = map.center.latitude + ((Math.random()-0.5) * Math.abs(map.box[0].latitude - map.box[1].latitude)),
+            lng = map.center.longitude + ((Math.random()-0.5) * Math.abs(map.box[0].longitude - map.box[1].longitude));
 
-        setTimeout(function () {
-            map.createPoi(
-                    "blue-ball.png", {
-                    longitude: 13.3896145,
-                    latitude: 52.5166648,
-                    name: "Nokia Office"
-            });
-
-            $( "#popupAmazing" ).popup( "close" )
-        }, 1300);
+        map.createPoi(
+            "blue-ball.png", {
+            latitude: lat,
+            longitude: lng,
+            name: lat+","+lng
+        });
     });
 
 })();
